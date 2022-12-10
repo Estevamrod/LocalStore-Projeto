@@ -22,9 +22,24 @@
     section button {
         margin-right: 10px;
     }
+    .show_data {
+        width: 50%;
+        height: fit-content;
+        border: 2px solid #000;
+        display: none;
+        margin-top: 10px;
+        padding: 10px;
+        justify-content: center;
+    }
+    .test {
+        width: fit-content;
+    }
+    .test:hover {
+        background: rgb(192, 216, 232);
+    }
 </style>
 </head>
-<body>
+<body id="body">
     <section>
         <input id="qntd_alunos" type="number" min="0" style="width: 11%;" placeholder="Quanto (s) aluno (s)?">
         <button id="btn_cad" onclick="Add_data()">Cadastrar</button>
@@ -42,6 +57,9 @@
             <button id="btn_exc" onclick="Excluir_data()" disabled>Excluir</button>
         </div>
     </section>
+    <!-- <section>
+        <div class="show_data"></div>
+    </section> -->
     <script src="main.js"></script>
 </body>
 </html>
