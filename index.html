@@ -22,14 +22,13 @@
     section button {
         margin-right: 10px;
     }
-    .show_data {
-        width: 50%;
-        height: fit-content;
-        border: 2px solid #000;
-        display: none;
+    table{
+        border: 1px solid #000;
         margin-top: 10px;
-        padding: 10px;
-        justify-content: center;
+        text-align: center;
+    }
+    #show_data {
+        display: none;
     }
     .test {
         width: fit-content;
@@ -42,8 +41,8 @@
 <body id="body">
     <section>
         <input id="qntd_alunos" type="number" min="0" style="width: 11%;" placeholder="Quanto (s) aluno (s)?">
-        <button id="btn_cad" onclick="Add_data()">Cadastrar</button>
-        <button disabled id="show_more" onclick="Show_hide()">Mais</button>
+        <button id="btn_cad" onclick="addLimiterToMtr_alunos()">Cadastrar</button>
+        <button disabled id="show_more" onclick="ShowandHideBtnMais()">Mais</button>
     </section>
     <section>
         <div class="notas_bimestre">
@@ -54,12 +53,24 @@
             <input id="notas_b4" type="number" max="10" min="0" style="width: 12%;" placeholder="4 Bimestre">
             <button id="btn_adi">adicionar</button>
             <input id="nome_exc" placeholder="nome do aluno" type="text" pattern="[A-Za-z]{3}"> 
-            <button id="btn_exc" onclick="Excluir_data()" disabled>Excluir</button>
+            <button id="btn_exc" onclick="actionToRemoveData()" disabled>Excluir</button>
         </div>
     </section>
-    <!-- <section>
-        <div class="show_data"></div>
-    </section> -->
-    <script src="main.js"></script>
+    <section>
+        <div id="show_data">
+            <table>
+                <thead>
+                    <th>Nome do Aluno</th>
+                    <th>1° Bimestre</th>
+                    <th>2° Bimestre</th>
+                    <th>3° Bimestre</th>
+                    <th>4° Bimestre</th>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="src/main.js"></script>
 </body>
 </html>
