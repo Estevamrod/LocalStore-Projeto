@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Alunos :)</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <style>
+        .FormMain button{
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        table{
+            border: 1px solid #000;
+            margin-top: 10px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        .TableData {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 12px;
+        }
+        tr td {
+            border: 1px solid #000;
+        }
+        tr th {
+            border: 1px solid #000;
+        }
+        th {
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="FormMain">
+        <input id="nome">
+        <input id="b1">
+        <input id="b2">
+        <input id="b3">
+        <input id="b4">
+        <button id="teste">aqui</button>
+        <input id="nametodel">
+        <button id="del">Deletar</button>
+    </div>
+    <div class="TableData">
+        <table>
+            <thead>
+                <th>Nome do Aluno</th>
+                <th>1° Bimestre</th>
+                <th>2° Bimestre</th>
+                <th>3° Bimestre</th>
+                <th>4° Bimestre</th>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+    <script src="test.js"></script>
+</body>
+</html>
